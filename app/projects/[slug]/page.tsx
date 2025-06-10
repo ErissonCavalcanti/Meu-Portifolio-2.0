@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+
 import ProjectDetails from '../../_components/_components/ProjectDetails';
 import { PROJECTS } from '@/lib/data';
 import { Metadata } from 'next';
@@ -19,7 +20,7 @@ export const generateMetadata = async ({
         title: `${project?.title} - ${project?.techStack
             .slice(0, 3)
             .join(', ')}`,
-        description: project?.description || '',
+        description: project?.description,
     } as Metadata;
 };
 
@@ -32,12 +33,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         return notFound();
     }
 
-    return (
-        <ProjectDetails
-            project={project}
-            descriptionKey="description" // Provide the appropriate key as needed
-        />
-    );
+    return <ProjectDetails project={project} />;
 };
 
 export default Page;
