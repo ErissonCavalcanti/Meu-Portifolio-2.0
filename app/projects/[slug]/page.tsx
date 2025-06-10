@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import ProjectDetails from '../../_components/_components/ProjectDetails';
+import ProjectDetails from './_components/ProjectDetails';
 import { PROJECTS } from '@/lib/data';
 import { Metadata } from 'next';
 
