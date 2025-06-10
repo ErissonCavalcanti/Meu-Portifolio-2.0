@@ -5,12 +5,11 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Experiences = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const { t } = useTranslation();
 
     useGSAP(
         () => {
@@ -61,10 +60,10 @@ const Experiences = () => {
                     {MY_EXPERIENCE.map((item) => (
                         <div key={item.title} className="experience-item">
                             <p className="text-xl text-muted-foreground">
-                                {t(item.company)}
+                                {item.company}
                             </p>
                             <p className="text-5xl font-anton leading-none mt-3.5 mb-2.5">
-                                {t(item.title)}
+                                {item.title}
                             </p>
                             <p className="text-lg text-muted-foreground">
                                 {item.duration}
