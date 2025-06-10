@@ -1,11 +1,8 @@
 # 🚀 My Portfolio Website
 
-![image](https://github.com/user-attachments/assets/ade45c4b-b2cb-46cb-b8a6-31cad3bd0c5a)
+(![banner](https://github.com/user-attachments/assets/c5de1424-95cf-4963-9853-5d290bfc96f2)
+)
 
-
-pnpm install
-pnpm dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
